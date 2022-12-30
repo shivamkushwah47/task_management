@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "224193963847",
+    "project_id": "visiter-app-c7032",
+    "storage_bucket": "visiter-app-c7032.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224193963847:android:5cf4ad83abd6b30b918e62",
+        "android_client_info": {
+          "package_name": "com.example.visiter_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224193963847-5fic32oofj75dngogldjujsjap01dk6r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGlnNwFVoX6GJUTop0D3Oaoyi0XVRu2b8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224193963847-5fic32oofj75dngogldjujsjap01dk6r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
