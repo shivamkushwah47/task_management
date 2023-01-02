@@ -33,20 +33,20 @@ class SignupView extends GetView<SignupController> {
                                 fontWeight: FontWeight.bold,
                                 fontSize: 28)),
                       ],
-                    ),
+                    ), 
 
                   SizedBox(
                     height: 20,
                   ),
 
-                    Text("ENTER YOUR PHONE NUMBER",
+                    Text("ENTER YOUR PHONE NUMBER TO SEND OTP",
                         textAlign: TextAlign.left,
                         style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w300,
-                            fontSize: 20)),
+                            fontSize: 22)),
 
-                       Text("TO SEND OTP",
+                       Text("",
                             textAlign: TextAlign.left,
                             style: TextStyle(
 
@@ -134,7 +134,7 @@ class SignupView extends GetView<SignupController> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(
-                            "assets/img.png",
+                            "assets/Image/img.png",
                             width: 30,
                             height: 30,
                           ),

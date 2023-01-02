@@ -1,7 +1,8 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
-
+import 'package:visiter_app/feature/Introduction/view/introduction_view.dart';
 import '../controller/splash_controller.dart';
 
 class SplashView extends GetView<SplashController> {
@@ -11,16 +12,15 @@ class SplashView extends GetView<SplashController> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Container(
-            color: Colors.blue,
-            child: Center(
-                child: Text(
-              "Welcome",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 40),
-            ))),
+        body: AnimatedSplashScreen(
+          splash: Image.asset("assets/Image/taskManageIcon2.png"
+            ,),
+          nextScreen: IntroView(),
+          splashTransition: SplashTransition.slideTransition,
+          backgroundColor: Colors.white,
+          duration: 3000,
+
+        )
       ),
     );
   }

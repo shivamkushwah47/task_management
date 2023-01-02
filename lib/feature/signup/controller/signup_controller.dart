@@ -12,11 +12,9 @@ class SignupController extends GetxController {
   static TextEditingController phoneController = TextEditingController();
   static String verificationId = "";
   static var phonevalue= "";
-  FirebaseAuth _auth = FirebaseAuth.instance;
 
-  gotoSignup() {
-    Get.toNamed(Routes.details);
-  }
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
 
   String? isvalid(String value) {
     if (value.length < 10) {

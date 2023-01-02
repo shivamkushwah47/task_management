@@ -5,9 +5,6 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:intl_phone_field/helpers.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:visiter_app/core/model/fetchdata_response.dart';
-import 'package:visiter_app/core/repository/loginpage/login_repo.dart';
-import 'package:visiter_app/core/repository/loginpage/login_repo_impl.dart';
 import 'package:visiter_app/core/routes.dart';
 
 class LoginController extends GetxController {
@@ -78,9 +75,7 @@ class LoginController extends GetxController {
     if (loginFormKey.currentState!.validate()) {
       if (isEmail(emailController.text)) {
         print("Login Form vaidated");
-        fetchData();
         return true;
-
       }
     }
   }
@@ -100,41 +95,6 @@ class LoginController extends GetxController {
     } else if (connectionresult == ConnectivityResult.mobile) {
       print("mobileData connection");
 
-    }
-  }
-
-
-
-  List<FetchDataResponse> internDataList = <FetchDataResponse>[].obs;
-  // late LoginRepoImpl _loginRepo;
-  LoginRepoImpl _loginRepo =  Get.find<LoginRepoImpl>() ;
-  // Logincontroller() {
-  //   _loginRepo = Get.find<LoginRepoImpl>();
-  // }
-
-  fetchData() async {
-    final response = await _loginRepo.fetchDataAPI(emailController.text,passwordController.text);
-    var isvalid = loginFormKey.currentState?.validate();
-    if(isvalid==true){
-      if(response![0].response == 1){
-        print("Response Stored");
-        SharedPreferences prefs = await SharedPreferences.getInstance();
-        prefs.setInt("response", response[0].response!);
-        prefs.setString("Id", response[0].id!);
-        prefs.setString("name", response[0].name!);
-        prefs.setString("emailId", response[0].emailId!);
-        prefs.setString("phone", response[0].phone!);
-        prefs.setString("password", response[0].password!);
-
-        Get.toNamed(Routes.navigationbar);
-      }else{
-
-        Get.snackbar("warning", "invalid Credentials",
-            colorText: Colors.white,
-            backgroundColor: Colors.red,
-            snackPosition: SnackPosition.BOTTOM
-        );
-      }
     }
   }
 
