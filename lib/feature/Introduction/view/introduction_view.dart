@@ -39,7 +39,7 @@ class IntroView extends GetView<IntroController> {
           pages: [
             PageViewModel(
                 title: "PLANNING",
-                image: Image.asset('assets/ONBOARDING1.jpg'),
+                image: Image.asset('assets/Image/visitor-management.jpg'),
                 bodyWidget: Column(
                   children: [
                     Text(
@@ -63,7 +63,7 @@ class IntroView extends GetView<IntroController> {
                 decoration: PageDecoration()),
             PageViewModel(
                 title: "STARTUP",
-                image: Image.asset('assets/ONBOARDING2.jpg'),
+                image: Image.asset('assets/Image/visitor-management.jpg'),
                 bodyWidget: Column(
                   children: [
                     Text(
@@ -87,7 +87,7 @@ class IntroView extends GetView<IntroController> {
                 decoration: PageDecoration()),
             PageViewModel(
                 title: "SUCCESS",
-                image: Image.asset('assets/ONBOARDING3.jpg'),
+                image: Image.asset('assets/Image/visitor-management.jpg'),
                 bodyWidget: Column(
                   children: [
                     Text(

@@ -31,7 +31,7 @@ class DashboardView extends GetView<DashboardController> {
                       ),
                     ),
                     Image.asset(
-                      "assets/LOGIN 1.png",
+                      "assets/Image/visitor-management.jpg",
                       width: 600,
                     ),
                     SizedBox(

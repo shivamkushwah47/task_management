@@ -8,8 +8,6 @@ import 'package:visiter_app/feature/otpdetail/Controller/otp_detail_controller.d
 import 'package:visiter_app/feature/signup/controller/signup_controller.dart';
 
 class OtpDetail extends GetView<OtpDetailController> {
-  var bh = [1, 2, 3, 4];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -129,7 +127,7 @@ class OtpDetail extends GetView<OtpDetailController> {
                                     8) //content padding inside button
                             ),
                             onPressed: () {
-                              controller.signupAPI();
+                              controller.addUser();
                             },
                             child: Text("Submit",
                                 style: TextStyle(

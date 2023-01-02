@@ -32,7 +32,7 @@ class LoginView extends GetView<LoginController> {
                       height: 20,
                     ),
                     Image.asset(
-                      "assets/LOGIN 1.png",
+                      "assets/Image/visitor-management.jpg",
                       width: 600,
                     ),
                     SizedBox(
@@ -115,9 +115,7 @@ class LoginView extends GetView<LoginController> {
                           shape: StadiumBorder(), // NEW
                         ),
                         onPressed: () {
-                          controller.fetchData();
-                          // controller.checkValid();
-                          // controller.signupformvalid();
+
                         },
                         child: Text(
                           'LOGIN',
